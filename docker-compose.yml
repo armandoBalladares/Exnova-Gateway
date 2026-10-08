@@ -1,0 +1,13 @@
+services:
+  api:
+    build: .
+    image: exnova-gateway:latest
+    ports:
+      - "8000:8000"
+    environment:
+      APP_ENV: ${APP_ENV:-dev}
+    env_file:
+      - .env.${APP_ENV:-dev}
+    volumes:
+      - ./logs:/var/log/exnova-gateway   # persistencia de app.log y audit.log
+    restart: unless-stopped

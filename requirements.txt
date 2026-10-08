@@ -1,0 +1,8 @@
+fastapi>=0.115,<1.0
+uvicorn[standard]>=0.30
+pydantic>=2.7
+pydantic-settings>=2.3
+anyio>=4.4
+# Cliente de Exnova (fork de iqoptionapi). Se recomienda fijar un commit/tag en producción:
+#   git+https://github.com/zagmi/exnova.git@<commit>
+git+https://github.com/zagmi/exnova.git
